@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 // placing user order for frontend//
 
 const placeOrder = async(req,res)=>{
-    const frontend_url = "http://localhost:5173"
+    const frontend_url = "https://full-stack-food-delivery-web.vercel.app"
 try {
     const newOrder = new orderModel({
         userId:req.user.userId,
@@ -122,6 +122,7 @@ const updateStatus = async(req,res)=>{
   }
 
 }
+
 
 
 export  {placeOrder,verifyOrder,userOrders,listOrders,updateStatus}
