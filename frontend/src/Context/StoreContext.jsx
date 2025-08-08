@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
-  const url = "http://localhost:5000";
+  const url = "https://food-del-backend-peach.vercel.app";
   const[food_list, setFood_list] = useState([])
 
   const addToCart = async (itemId) => {
